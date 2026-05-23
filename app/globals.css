@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --mango-orange: #FF6B00;
+  --mango-deep: #E65100;
+  --mango-dark: #BF360C;
+  --accent-pink: #EC407A;
+  --accent-purple: #AB47BC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom selection */
+::selection {
+  background-color: rgba(255, 107, 0, 0.8);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 107, 0, 0.8);
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 0, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 0, 0.7);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 0, 0.4) transparent;
+}
+
+/* Clip path for slant section */
+.clip-path-slant-top {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  .clip-path-slant-top {
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Gradient animation */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Loading spinner */
+@keyframes spin-smooth {
+  to { transform: rotate(360deg); }
+}
+
+/* Text shadow utility */
+.text-shadow-overlay {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
