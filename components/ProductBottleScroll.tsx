@@ -125,10 +125,10 @@ export default function ProductBottleScroll() {
   }, [drawFrame]);
 
   return (
-    <div ref={sectionRef} className="relative h-[500vh] bg-transparent">
+    <div ref={sectionRef} className="relative h-[500vh] bg-transparent z-1">
       {/* Loading Overlay */}
       {isLoading && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center backdrop-blur-sm bg-black/20 transition-opacity duration-300">
+        <div className="fixed inset-0 z-10 flex flex-col items-center justify-center backdrop-blur-sm bg-black/20 transition-opacity duration-300">
           <div className="w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin mb-4" />
           <p className="text-white font-medium animate-pulse drop-shadow-md">
             Blending Fresh Ingredients...
@@ -144,7 +144,7 @@ export default function ProductBottleScroll() {
       )}
 
       {/* Sticky container */}
-      <div className="sticky top-0 h-screen w-[100vw] ml-[calc(-50vw+50%)] overflow-hidden">
+      <div className="sticky top-0 h-screen w-[100vw] ml-[calc(-50vw+50%)] overflow-hidden z-1">
         <canvas
           ref={canvasRef}
           className="absolute top-0 left-0 w-[100vw] h-[100vh]"

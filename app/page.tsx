@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <main
-      className="min-h-screen transition-all duration-1000 ease-in-out"
+      className="min-h-screen transition-all duration-1000 ease-in-out pt-[72px]"
       style={{
         background: "#0A0A0A",
       }}
